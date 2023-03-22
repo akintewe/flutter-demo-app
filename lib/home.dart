@@ -1,42 +1,44 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class Homepage extends StatefulWidget {
+  final String title;
+  const Homepage({super.key, required this.title});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<Homepage> createState() => _HomepageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomepageState extends State<Homepage> {
+  int _counter = 0;
+
+  void _increaseCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('This is a flutter demo project'),
+        title: Text(widget.title),
         centerTitle: true,
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _increaseCounter,
+        tooltip: 'Increase',
+        child: const Icon(Icons.add),
+      ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          RichText(
-            text: const TextSpan(
-                text:
-                    'This is a flutter demo project to test my code quality coverage',
-                style: TextStyle(
-                    color: Colors.black, fontWeight: FontWeight.bold)),
+          Text(
+            'How old are you ',
+            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
           ),
-          const SizedBox(
-            height: 30,
-          ),
-          InkWell(
-            onTap: () {},
-            child: const Text(
-              'Click here for fun',
-              style: TextStyle(
-                  color: Colors.green,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20),
-            ),
+          Text(
+            '$_counter',
           )
         ],
       ),
