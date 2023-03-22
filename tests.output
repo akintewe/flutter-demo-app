@@ -1,0 +1,11 @@
+{"protocolVersion":"0.1.1","runnerVersion":null,"pid":32129,"type":"start","time":0}
+{"suite":{"id":0,"platform":"vm","path":"/Users/nathan/flutter_demo/test/widget_test.dart"},"type":"suite","time":0}
+{"test":{"id":1,"name":"loading /Users/nathan/flutter_demo/test/widget_test.dart","suiteID":0,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":2}
+{"count":1,"time":17,"type":"allSuites"}
+
+[{"event":"test.startedProcess","params":{"observatoryUri":"http://127.0.0.1:61279/FZdORh2E9cw=/"}}]
+{"testID":1,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":8764}
+{"group":{"id":2,"suiteID":0,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":1,"line":null,"column":null,"url":null},"type":"group","time":8769}
+{"test":{"id":3,"name":"Counter increments smoke test","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":154,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":14,"root_column":3,"root_url":"file:///Users/nathan/flutter_demo/test/widget_test.dart"},"type":"testStart","time":8770}
+{"testID":3,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":10576}
+{"success":true,"type":"done","time":11368}
