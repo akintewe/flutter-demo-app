@@ -69,3 +69,14 @@ flutter {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
+plugins {
+  id "org.sonarqube" version "3.5.0.2730"
+}
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "akintewe_flutter-demo-app"
+    property "sonar.organization", "akintewe"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
+}
