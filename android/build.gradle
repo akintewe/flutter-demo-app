@@ -30,3 +30,12 @@ task clean(type: Delete) {
     delete rootProject.buildDir
 }
 
+plugins {
+  id "org.sonarqube" version "3.5.0.2730"
+}
+
+sonar {
+  properties {
+    property "sonar.projectKey", "flutter-demo-test"
+  }
+}
